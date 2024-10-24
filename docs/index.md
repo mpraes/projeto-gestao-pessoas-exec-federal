@@ -103,7 +103,7 @@ Obs: Todas as tecnologias citadas acima são de código aberto, onde o custo par
     style K fill:#faa,stroke:#333,stroke-width:2px
 ```
 
-## Observações Finais
+## Observações Iniciais
 
 O projeto ainda está em desenvolvimento, e os dados do Portal de Dados Abertos do Governo Federal estão sendo atualizados constantemente, logo, é importante manter o projeto atualizado para não perder dados importantes.
 Além disso, são diversos arquivos ods em links de períodos diferentes, logo preciso analisar se crio somente um etl para todos os dados ou faço um etl para cada período.
@@ -129,3 +129,13 @@ Além disso, são diversos arquivos ods em links de períodos diferentes, logo p
 ```sql
 -- Conteúdo do arquivo create_table_ft_cargo.sql
 ```
+
+## Scripts do Projeto
+
+::: app.extract.extract_as_csv
+
+A função acima foi testada a exaustão pelo script test_func_extract_as_csv.py e passou em todos os testes.
+
+Próximos passos: 
+1 - deixar a função dinâmica para aplicar a função em todos os arquivos .ods nos links do site.
+2 - Aplicar contrato de dados já na extração dos mesmos com pydantic.

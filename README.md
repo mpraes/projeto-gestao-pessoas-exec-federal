@@ -33,4 +33,5 @@ Além disso, são diversos arquivos ods em links de períodos diferentes, logo p
 1. Estruturação do projeto - OK
 2. Modelagem do DW, criação das tabelas no banco de dados PostgreSQL - OK
 ![tabelas](image.png)
+3. Início das Extrações - Em andamento
 
