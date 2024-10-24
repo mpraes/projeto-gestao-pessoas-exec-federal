@@ -1,0 +1,11 @@
+site_name: Documentação do Projeto ETL Python - Dados Abertos Governo Federal - Gestão de Pessoas
+
+theme:
+ name: material
+
+plugins:
+ - search
+ - mermaid2
+ - mkdocstrings
+ 
+

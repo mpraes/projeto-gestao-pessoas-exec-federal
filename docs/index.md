@@ -47,7 +47,48 @@ Essa será a estrutura do banco de dados, modelagem star schema simples:
 - PostgreSQL
 - Power BI
 
+Obs: Todas as tecnologias citadas acima são de código aberto, onde o custo para o projeto tende a ser mínimo.
+
+## Fluxo de Dados
+
+```mermaid
+    flowchart TD
+        A[ODS Files on Website] --> B[Apply Data Contract]
+        B --> C{Contract Valid?}
+        
+        C -- Yes --> D[Extract Data]
+        D --> E[Test Data]
+        E --> F[Validate Data]
+    F --> G{Is Data Valid?}
+    
+    G -- Yes --> H[Transform Data]
+    H --> I[Load Data into PostgreSQL]
+    
+    G -- No --> J[Log Errors]
+    C -- No --> K[Reject Data & Log Issues]
+
+    subgraph DataFlowProcess
+        D --> E
+        E --> F
+        F --> G
+        G --> H
+        H --> I
+        G --> J
+        C --> K
+    end
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#0f0,stroke:#333,stroke-width:2px
+    style I fill:#bbf,stroke:#333,stroke-width:2px
+    style J fill:#faa,stroke:#333,stroke-width:2px
+    style K fill:#faa,stroke:#333,stroke-width:2px
+```
+
 ## Observações Finais
 
 O projeto ainda está em desenvolvimento, e os dados do Portal de Dados Abertos do Governo Federal estão sendo atualizados constantemente, logo, é importante manter o projeto atualizado para não perder dados importantes.
 Além disso, são diversos arquivos ods em links de períodos diferentes, logo preciso analisar se crio somente um etl para todos os dados ou faço um etl para cada período.
+
+## Passos do Projeto
+
+1. Estruturação do projeto (em andamento)

@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "projeto de dados de gestão pessoas"
+version = "0.1.0"
+description = "Esse projeto de Dados consiste em recuperar todos os dados do Governo Federal de Cargos e Vacancias e criar Kpis para análise"
+authors = ["Renan de Moraes"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.3"
+taskipy = "^1.14.0"
+pytest = "^8.3.3"
+pydantic = "^2.9.2"
+mkdocs = "^1.6.1"
+mkdocs-mermaid2-plugin = "^1.1.1"
+mkdocs-material = "^9.5.42"
+mkdocstrings = "^0.26.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+format = """
+isort .
+black .
+"""
+kill = "kill -9 $(lsof -t -i :8000)"
+test = "pytest -v"
+run = """
+python3 app/main.py
+"""
+doc = "mkdocs serve"
