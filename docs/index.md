@@ -12,6 +12,7 @@ Para este projeto, utilizarei o banco de dados PostgreSQL estanciado no site ren
 Essa será a estrutura do banco de dados, modelagem star schema simples:
 
 ```mermaid
+erDiagram
     Dim_Tempo {
         int ID_Tempo PK
         string Nome_Mes
