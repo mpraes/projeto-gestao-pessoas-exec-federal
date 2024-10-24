@@ -136,6 +136,7 @@ Além disso, são diversos arquivos ods em links de períodos diferentes, logo p
 
 A função acima foi testada a exaustão pelo script test_func_extract_as_csv.py e passou em todos os testes.
 
-Próximos passos: 
+Próximos passos:
+ 
 1 - deixar a função dinâmica para aplicar a função em todos os arquivos .ods nos links do site.
 2 - Aplicar contrato de dados já na extração dos mesmos com pydantic.
