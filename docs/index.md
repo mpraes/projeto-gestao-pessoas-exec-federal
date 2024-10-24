@@ -12,9 +12,27 @@ Para este projeto, utilizarei o banco de dados PostgreSQL estanciado no site ren
 Essa será a estrutura do banco de dados, modelagem star schema simples:
 
 ```mermaid
-erDiagram
+    erDiagram
+    Fato_Cargos {
+        int ID_Orgao FK
+        int ID_Tempo FK
+        int ID_Cargo FK
+        int Aprovada
+        int Distribuida
+        int Ocupada
+        int Vagas
+        int Vacancia_Exoneracao
+        int Vacancia_Demissao
+        int Vacancia_Promocao
+        int Vacancia_Readaptacao
+        int Vacancia_Aposentadoria
+        int Vacancia_Posse_Inac
+        int Vacancia_Falecimento
+    }
+
     Dim_Tempo {
         int ID_Tempo PK
+        int ANO_MES
         string Nome_Mes
         int Ano
         int Trimestre
@@ -26,20 +44,20 @@ erDiagram
         int ID_Orgao PK
         string Nome_Orgao
         string Sigla_Orgao
-        string Categoria
     }
 
-    Fato_Cargos {
-        int ID_Orgao FK
-        int ID_Tempo FK
-        int Aprovada
-        int Distribuida
-        int Ocupada
-        int Vagas
+    Dim_Cargo {
+        int ID_Cargo PK
+        string Nivel_Escolaridade
+        string Plano_Carreira
+        string Nome_Cargo
+        int Codigo_Cargo
+        string Cargo_Em_Extincao
     }
 
     Fato_Cargos }|--|| Dim_Tempo : "ID_Tempo (FK)"
     Fato_Cargos }|--|| Dim_Orgao : "ID_Orgao (FK)"
+    Fato_Cargos }|--|| Dim_Cargo : "ID_Cargo (FK)"
 ```
 
 ## Tecnologias Utilizadas
