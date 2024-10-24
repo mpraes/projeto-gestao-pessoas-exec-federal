@@ -11,7 +11,8 @@ Para este projeto, utilizarei o banco de dados PostgreSQL estanciado no site ren
 
 Essa será a estrutura do banco de dados, modelagem star schema simples:
 
-![Diagrama](https://github.com/user-attachments/assets/93b21aeb-54a9-4578-ae7d-be2758eca9a7)
+![diagramaer](https://github.com/user-attachments/assets/6711f9f5-2560-4de5-a577-e84d2caa92c2)
+
 
 ![fluxo](https://github.com/user-attachments/assets/8093ceab-fa77-48c8-9e4f-36210cece445)
 
