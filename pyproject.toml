@@ -17,7 +17,13 @@ mkdocs-mermaid2-plugin = "^1.1.1"
 mkdocs-material = "^9.5.42"
 mkdocstrings = "^0.26.2"
 mkdocstrings-python = "^1.12.2"
+python-dotenv = "^1.0.1"
+odfpy = "^1.4.1"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest-mock = "^3.14.0"
+pytest = "^8.3.3"
 
 [build-system]
 requires = ["poetry-core"]
@@ -29,7 +35,7 @@ isort .
 black .
 """
 kill = "kill -9 $(lsof -t -i :8000)"
-test = "pytest -v"
+test = "pytest tests/"
 run = """
 python3 app/main.py
 """
