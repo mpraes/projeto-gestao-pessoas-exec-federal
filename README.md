@@ -10,6 +10,7 @@ Este é o link fonte com todos os dados em formato .ods: [Portal de Dados Aberto
 Para este projeto, utilizarei o banco de dados PostgreSQL estanciado no site render.com
 
 Essa será a estrutura do banco de dados, modelagem star schema simples:
+
 ![Diagrama](https://github.com/user-attachments/assets/93b21aeb-54a9-4578-ae7d-be2758eca9a7)
 
 ![fluxo](https://github.com/user-attachments/assets/8093ceab-fa77-48c8-9e4f-36210cece445)
