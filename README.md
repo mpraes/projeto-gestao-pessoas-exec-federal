@@ -30,4 +30,7 @@ Além disso, são diversos arquivos ods em links de períodos diferentes, logo p
 
 ## Passos do Projeto
 
-1. Estruturação do projeto (em andamento)
+1. Estruturação do projeto - OK
+2. Modelagem do DW, criação das tabelas no banco de dados PostgreSQL - OK
+![tabelas](image.png)
+

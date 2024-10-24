@@ -108,6 +108,24 @@ Obs: Todas as tecnologias citadas acima são de código aberto, onde o custo par
 O projeto ainda está em desenvolvimento, e os dados do Portal de Dados Abertos do Governo Federal estão sendo atualizados constantemente, logo, é importante manter o projeto atualizado para não perder dados importantes.
 Além disso, são diversos arquivos ods em links de períodos diferentes, logo preciso analisar se crio somente um etl para todos os dados ou faço um etl para cada período.
 
-## Passos do Projeto
+## Códigos de criação das tabelas no banco de dados
 
-1. Estruturação do projeto (em andamento)
+### Dimensões
+
+```sql
+-- Conteúdo do arquivo create_table_dim_calendario.sql
+```
+
+```sql
+-- Conteúdo do arquivo create_table_dim_orgao.sql
+```
+
+```sql
+-- Conteúdo do arquivo create_table_dim_cargo.sql
+```
+
+### Fato
+
+```sql
+-- Conteúdo do arquivo create_table_ft_cargo.sql
+```

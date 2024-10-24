@@ -16,6 +16,7 @@ mkdocs = "^1.6.1"
 mkdocs-mermaid2-plugin = "^1.1.1"
 mkdocs-material = "^9.5.42"
 mkdocstrings = "^0.26.2"
+mkdocstrings-python = "^1.12.2"
 
 
 [build-system]

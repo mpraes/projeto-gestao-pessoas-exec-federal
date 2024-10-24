@@ -1,0 +1,20 @@
+CREATE TABLE ft_gestao_pessoas (
+    id_fato SERIAL PRIMARY KEY,
+    id_orgao INTEGER NOT NULL,
+    id_tempo INTEGER NOT NULL,
+    id_cargo INTEGER NOT NULL,
+    aprovada INTEGER,
+    distribuida INTEGER,
+    ocupada INTEGER,
+    vagas INTEGER,
+    vacancia_exoneracao INTEGER,
+    vacancia_demissao INTEGER,
+    vacancia_promocao INTEGER,
+    vacancia_readaptacao INTEGER,
+    vacancia_aposentadoria INTEGER,
+    vacancia_posse_inac INTEGER,
+    vacancia_falecimento INTEGER,
+    FOREIGN KEY (id_orgao) REFERENCES dim_orgao(id_orgao),
+    FOREIGN KEY (id_tempo) REFERENCES dim_tempo(id_tempo),
+    FOREIGN KEY (id_cargo) REFERENCES dim_cargo(id_cargo)
+)
