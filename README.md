@@ -23,7 +23,7 @@ Essa será a estrutura do banco de dados, modelagem star schema simples:
 - PostgreSQL
 - Power BI (para aplicação dos Kpis)
 
-## Observações Finais
+## Observações introdutórias
 
 O projeto ainda está em desenvolvimento, e os dados do Portal de Dados Abertos do Governo Federal estão sendo atualizados constantemente, logo, é importante manter o projeto atualizado para não perder dados importantes.
 Além disso, são diversos arquivos ods em links de períodos diferentes, logo preciso analisar se crio somente um etl para todos os dados ou faço um etl para cada período.
@@ -33,5 +33,12 @@ Além disso, são diversos arquivos ods em links de períodos diferentes, logo p
 1. Estruturação do projeto - OK
 2. Modelagem do DW, criação das tabelas no banco de dados PostgreSQL - OK
 ![tabelas](image.png)
-3. Início das Extrações - Em andamento
+3. Extrações dos arquivos - OK
+4. Validação dos dados via contrato - OK
+5. Testes - Em andamento 
 
+## Pontos importantes
+
+- Na fase de extração do link/site do dados abertos (28/10), já realizada e testada a extração dos dados via csv, visto que os arquivos excel/ods tem mais de uma aba de informações e importa para este projeto somente uma aba.
+- Houve muita necessidade de criar script dinamico, visto que links base, formatos de arquivos e até nomes de abas tem diferenças.
+- São mais de 70 arquivos que serão extraídos do Excel para diretório local em formato csv.

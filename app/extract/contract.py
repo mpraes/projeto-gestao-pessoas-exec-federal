@@ -1,6 +1,4 @@
-from pydantic import BaseModel, field_validator, Field, ValidationError
-from datetime import datetime
-from typing import Optional
+from pydantic import BaseModel,ValidationError
 
 class DataContrato(BaseModel):
     ANO_MES: str

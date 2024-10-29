@@ -6,7 +6,7 @@ from openpyxl import load_workbook
 from odf.opendocument import load
 from odf.table import Table
 from odf.table import TableRow, TableCell
-from contract import validar_dados
+from .contract import validar_dados
 from odf.text import P
 
 def verificar_tipo_arquivo(data):
