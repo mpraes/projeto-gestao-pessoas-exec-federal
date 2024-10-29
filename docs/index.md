@@ -132,11 +132,18 @@ Além disso, são diversos arquivos ods em links de períodos diferentes, logo p
 
 ## Scripts do Projeto
 
-::: app.extract.extract_as_csv
+::: app.extract.delete_all_files
+::: app.extract.extract_all_data
+::: app.extract_contract.py
 
-A função acima foi testada a exaustão pelo script test_func_extract_as_csv.py e passou em todos os testes.
+
+## Andamento
+
+- Na fase de extração do link/site do dados abertos (28/10), já realizada e testada a extração dos dados via csv, visto que os arquivos excel/ods tem mais de uma aba de informações e importa para este projeto somente uma aba.
+- Houve muita necessidade de criar script dinamico, visto que links base, formatos de arquivos e até nomes de abas tem diferenças.
+- São mais de 70 arquivos que serão extraídos do Excel para diretório local em formato csv.
 
 Próximos passos:
  
-1 - deixar a função dinâmica para aplicar a função em todos os arquivos .ods nos links do site.
-2 - Aplicar contrato de dados já na extração dos mesmos com pydantic.
+1 - Fazer testes no script de extração.
+2 - Revisar a modelagem do DW se necessário e realizar as transformações.
