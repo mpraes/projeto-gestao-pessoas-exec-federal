@@ -20,6 +20,8 @@ mkdocstrings-python = "^1.12.2"
 python-dotenv = "^1.0.1"
 odfpy = "^1.4.1"
 openpyxl = "^3.1.5"
+logging = "^0.4.9.6"
+requests-mock = "^1.12.1"
 
 
 [tool.poetry.group.dev.dependencies]
