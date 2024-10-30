@@ -47,13 +47,14 @@ def validar_dados(df):
         df.fillna({col:valor_padrao}, inplace=True)
 
     # Valida cada linha do DataFrame com o modelo dinâmico
-    try:
-        for index, row in df.iterrows():
+    for index, row in df.iterrows():
+        try:
             # Cria uma instância do modelo dinâmico com os dados da linha
             contrato = ModeloDinamico(**row.to_dict())
-        print("Todos os dados foram validados com sucesso!")
-    except ValidationError as e:
-        print(f"Erro de validação: {e}")
+        except ValidationError as e:
+            print(f"Erro de validação: {e}")
+            raise  # Relança o erro para que possa ser capturado externamente
+    print("Todos os dados foram validados com sucesso!")
 
 # Exemplo de uso com um DataFrame dinâmico
 # df = pd.DataFrame(...)  # Substitua pelo seu DataFrame carregado
