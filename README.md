@@ -1,11 +1,76 @@
-# Bem-vindo à Documentação do Projeto ETL Python - Dados Abertos Governo Federal - Gestão de Pessoas
+---
 
-## Introdução
+# 📊 **Projeto ETL Python - Dados Abertos Governo Federal - Gestão de Pessoas** 🇧🇷
 
-Este projeto tem como objetivo extrair, transformar e carregar dados dos links do Portal de Dados Abertos do Governo Federal para o banco de dados do projeto ETL Python - Dados Abertos Governo Federal - Gestão de Pessoas.
-Este é o link fonte com todos os dados em formato .ods: [Portal de Dados Abertos do Governo Federal - Gestão de Pessoas](https://dados.gov.br/dados/conjuntos-dados/gestao-de-pessoas-executivo-federal---cargos-vagos-e-vacancias)
+## 🚀 **Introdução**
 
-## Modelagem de Dados
+Este projeto visa a **extração**, **transformação** e **carga** (ETL) de dados do Portal de Dados Abertos do Governo Federal, com foco na análise de cargos vagos e vacâncias no executivo federal.
+
+---
+
+## 🛠️ **Tecnologias Utilizadas**
+
+- **Python** para a automação do ETL
+- **PostgreSQL** como banco de dados final para armazenar as tabelas de análise
+- **Power BI** para criação de dashboards e monitoramento de KPIs
+
+## 📝 **Passos do Projeto**
+
+1. **Estruturação do projeto** - Concluído ✅
+2. **Modelagem e criação de tabelas** - Concluído ✅
+3. **Extração e transformação dos arquivos** - Em Andamento 🕑
+
+
+---
+
+## 📈 **Próximos Passos: Carga no PostgreSQL**
+
+1. **Preparação da Área de Staging**:
+   - Configure tabelas temporárias e esquemas necessários para acomodar os dados inicialmente.
+
+2. **Carga dos Dados**:
+   - Implemente o processo de inserção para garantir consistência e evitar duplicação de dados.
+   
+3. **Otimização do Desempenho**:
+   - Crie índices nas tabelas para acelerar consultas.
+   - Programe a carga incremental para atualizações periódicas.
+
+---
+
+# 🌎 **Project Documentation - Federal Executive Human Resource Management**
+
+## **Introduction**
+
+This project focuses on ETL processes to **extract**, **transform**, and **load** data from the Brazilian Government Open Data Portal, specifically analyzing vacancies within the federal executive branch.
+
+## **Technologies Used**
+
+- **Python** for ETL automation
+- **PostgreSQL** as the final database for analysis tables
+- **Power BI** for dashboards and KPI monitoring
+
+## **Project Steps**
+
+1. **Project setup** - Completed ✅
+2. **Data Modeling and Table Creation** - Completed ✅
+3. **Data Extraction and Transformation** - Ongoing 🕑
+
+---
+
+## 📈 **Next Steps: PostgreSQL Data Loading**
+
+1. **Staging Area Preparation**:
+   - Set up temporary tables and schemas to stage incoming data.
+
+2. **Data Loading**:
+   - Implement insertion processes ensuring data consistency and avoiding duplication.
+
+3. **Performance Optimization**:
+   - Index tables to speed up querying.
+   - Schedule incremental loads for periodic updates. 
+
+---
+## Desenho do fluxo e modelagem
 
 Para este projeto, utilizarei o banco de dados PostgreSQL estanciado no site render.com
 
@@ -17,28 +82,4 @@ Essa será a estrutura do banco de dados, modelagem star schema simples:
 ![fluxo](https://github.com/user-attachments/assets/8093ceab-fa77-48c8-9e4f-36210cece445)
 
 
-## Tecnologias Utilizadas
-
-- Python
-- PostgreSQL
-- Power BI (para aplicação dos Kpis)
-
-## Observações introdutórias
-
-O projeto ainda está em desenvolvimento, e os dados do Portal de Dados Abertos do Governo Federal estão sendo atualizados constantemente, logo, é importante manter o projeto atualizado para não perder dados importantes.
-Além disso, são diversos arquivos ods em links de períodos diferentes, logo preciso analisar se crio somente um etl para todos os dados ou faço um etl para cada período.
-
-## Passos do Projeto
-
-1. Estruturação do projeto - OK
-2. Modelagem do DW, criação das tabelas no banco de dados PostgreSQL - OK
-![tabelas](image.png)
-3. Extrações dos arquivos - OK
-4. Validação dos dados via contrato - OK
-5. Testes - Em andamento 
-
-## Pontos importantes
-
-- Na fase de extração do link/site do dados abertos (28/10), já realizada e testada a extração dos dados via csv, visto que os arquivos excel/ods tem mais de uma aba de informações e importa para este projeto somente uma aba.
-- Houve muita necessidade de criar script dinamico, visto que links base, formatos de arquivos e até nomes de abas tem diferenças.
-- São mais de 70 arquivos que serão extraídos do Excel para diretório local em formato csv.
+Claro! Vou ajustar a documentação mantendo o foco no fluxo e modelagem, enquanto destacamos a estrutura e os próximos passos para a carga no PostgreSQL.
